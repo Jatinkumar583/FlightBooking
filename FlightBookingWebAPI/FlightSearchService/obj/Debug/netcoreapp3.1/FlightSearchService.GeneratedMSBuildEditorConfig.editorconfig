@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = FlightSearchService
+build_property.ProjectDir = D:\FlightBookingWebAPI\FlightSearchService\

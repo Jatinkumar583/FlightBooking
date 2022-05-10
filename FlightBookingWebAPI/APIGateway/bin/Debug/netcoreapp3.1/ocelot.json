@@ -1,0 +1,35 @@
+{
+  "Routes": [
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/flight/findallairline",
+      "DownstreamScheme": "http",
+      "ServiceName": "flightBookService",
+      "UpstreamPathTemplate": "/api/gatway/flight/findallairline",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/flight/findairlineinventory",
+      "DownstreamScheme": "http",
+      "ServiceName": "flightInventoryService",
+      "UpstreamPathTemplate": "/api/gatway/flight/findairlineinventory",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/flight/findallairlinedetails",
+      "DownstreamScheme": "http",
+      "ServiceName": "flightSearchService",
+      "UpstreamPathTemplate": "/api/gatway/flight/findallairlinedetails",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": "8500",
+      "Type": "Consul"
+    }
+  }
+}
