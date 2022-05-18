@@ -1,0 +1,10 @@
+D:\FlightBookingWebAPI\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+D:\FlightBookingWebAPI\Common\bin\Debug\netcoreapp3.1\Common.dll
+D:\FlightBookingWebAPI\Common\bin\Debug\netcoreapp3.1\Common.pdb
+D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.csproj.AssemblyReference.cache
+D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.dll
+D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.pdb
