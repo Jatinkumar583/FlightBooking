@@ -22,6 +22,7 @@ import { ManageinventoryComponent } from './manageinventory/manageinventory.comp
 import { BookflightComponent } from './bookflight/bookflight.component';
 import { FilterPanelService } from './services/filterpanel';
 import { DatePipe } from '@angular/common';
+import { TicketdetailsComponent } from './ticketdetails/ticketdetails.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DatePipe } from '@angular/common';
     BookinghistoryComponent,
     ManageairlinesComponent,
     ManageinventoryComponent,
-    BookflightComponent    
+    BookflightComponent,
+    TicketdetailsComponent    
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { ManageinventoryComponent } from './manageinventory/manageinventory.comp
 import { RegisterComponent } from './register/register.component';
 import { AuthGaurd } from './services/auth.gaurd';
 import { SpecialEventsComponent } from './special-events/special-events.component';
+import { TicketdetailsComponent } from './ticketdetails/ticketdetails.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path:'bookflight',
     component:BookflightComponent
+  },
+  {
+    path:'ticketdetails',
+    component:TicketdetailsComponent
   }
 
 

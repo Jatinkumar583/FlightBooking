@@ -5,7 +5,7 @@
               <label for="validationCustom01" class="form-label" >Search By PNR</label>
               <input type="text" class="form-control" id="validationCustom01" name="txtPnr" ngModel required>      
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" hidden>
               <label for="validationCustom02" class="form-label" >Search By EmailId</label>
               <input type="text" class="form-control" id="validationCustom02" name="txtUserEmailId" ngModel required>     
             </div>
@@ -34,17 +34,39 @@
                 </thead>
                 <tbody>
                     <tr class="bg-green" *ngFor="let item of bookedFlightDetails">
+                        <td hidden>{{item.bookingId}}</td>
                         <td>{{item.flightNumber}}</td>
                         <td>{{item.pnr}}</td>
                         <td>{{item.source}}</td>
                         <td>{{item.destination}}</td>
                         <td>{{item.totalSeat}}</td>
                         <td>{{item.createdOn}}</td>  
-                        <td><button class="btn btn-primary"  type="submit">View</button></td>
-                        <td><button class="btn btn-primary" type="submit">Cancel</button></td>                      
+                        <td><button class="btn btn-primary"  type="submit" (click)="ViewTicketDetails(item)">View Details</button></td>
+                        <td><button class="btn btn-primary" type="submit" >Cancel Ticket</button></td>                      
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+<!-- Small modal -->
+<!-- <div class="modal fade" tabindex="-1" 
+role="dialog" aria-labelledby="mySmallModalLabel" aria-
+hidden="true">
+
+ <div class="modal-dialog modal-sm">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button class="close" aria-label="Close" 
+        (click)="smModal.hide()">
+          <span aria-hidden="true">&times;</span>
+      </button>
+          <h4 class="modal-title">Description</h4>
+      </div>
+      <div class="modal-body"  style="color: black;">
+     </div>
+   <div class="modal-footer">
+   <button class="btn btn-primary confirm-btn" 
+   (click)="smModal.hide()">Save changes</button>
+     </div> -->

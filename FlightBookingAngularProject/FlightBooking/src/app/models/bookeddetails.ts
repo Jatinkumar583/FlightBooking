@@ -1,4 +1,5 @@
 export class BookedDetails{   
+    bookingId:Number=0;
     flightNumber: Number=0;
     pnr: string="";
     source: string="";

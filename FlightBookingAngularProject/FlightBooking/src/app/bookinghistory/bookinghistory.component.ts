@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookedDetails } from '../models/bookeddetails';
+import { PassengerDetails } from '../models/passengerdetails';
 import { EventService } from '../services/event.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { EventService } from '../services/event.service';
 export class BookinghistoryComponent implements OnInit {
   bookedFlightDetails:Array<BookedDetails>=new Array<BookedDetails>(); 
   searchBookedFlightList: Array<BookedDetails> = new Array<BookedDetails>();
+  passengerDetails:PassengerDetails=new PassengerDetails();
   constructor(private _eventService: EventService,private _router: Router) { }
 
   ngOnInit(): void {
@@ -25,6 +27,13 @@ export class BookinghistoryComponent implements OnInit {
       return item.pnr == data.txtPnr || item.emailId == data.txtUserEmailId;
     });
     console.log(this.bookedFlightDetails);
+  }
+
+  ViewTicketDetails(ticketDetails:BookedDetails){
+    //this.filterPanelService.data = ticketDetails;
+    this._eventService.GetBookedPassengerDetails(ticketDetails.bookingId).subscribe(res => this.passengerDetails = res, err => (console.log(err)));
+   //bind to model ==BookingDetails
+    this._router.navigate(['/ticketdetails']);   
   }
 
 

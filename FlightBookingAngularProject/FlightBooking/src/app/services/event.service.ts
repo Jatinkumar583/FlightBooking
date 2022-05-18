@@ -19,11 +19,15 @@ export class EventService {
     }
 
     BookCustomerFlight(data:BookingDetails){        
-        return this.http.post("http://localhost:55167/api/v1.0/flight/booking/flightdetails", data);
+        return this.http.post("http://localhost:55167/api/v1.0/flight/booking/flightdetails", data,{ responseType: 'text'});
     }
 
     GetBookedDetailsByEmailId(userEmailId:string){
         return this.http.get<any>("http://localhost:55167/api/v1.0/flight/booking/history/"+userEmailId+"");
+    }
+
+    GetBookedPassengerDetails(bookingId:Number){
+        return this.http.get<any>("http://localhost:55167/api/v1.0/flight/booking/history/"+bookingId+"");
     }
 
 

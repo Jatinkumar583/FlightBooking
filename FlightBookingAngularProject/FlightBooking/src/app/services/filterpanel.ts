@@ -15,4 +15,11 @@ export class FilterPanelService {
     this.selectedFlightDetails = val;
   }
 
+  get BookedData(): any{
+    return this.selectedFlightDetails;
+  }
+  set BookedData(val: any){
+    this.selectedFlightDetails = val;
+  }
+
 }
