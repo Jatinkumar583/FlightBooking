@@ -40,6 +40,8 @@ namespace FlightInventoryService.Models
 
                 entity.Property(e => e.Airline).HasMaxLength(50);
 
+                entity.Property(e => e.CreatedOn).HasColumnType("date");
+
                 entity.Property(e => e.EndDateTime).HasColumnType("datetime");
 
                 entity.Property(e => e.FromPlace).HasMaxLength(50);
@@ -51,6 +53,8 @@ namespace FlightInventoryService.Models
                 entity.Property(e => e.StartDateTime).HasColumnType("datetime");
 
                 entity.Property(e => e.ToPlace).HasMaxLength(50);
+
+                entity.Property(e => e.UpdatedOn).HasColumnType("date");
             });
 
             modelBuilder.Entity<TblAirlineRegistration>(entity =>
@@ -111,9 +115,15 @@ namespace FlightInventoryService.Models
             {
                 entity.ToTable("tblUsers");
 
+                entity.Property(e => e.CreatedOn).HasColumnType("date");
+
+                entity.Property(e => e.EmailId).HasMaxLength(50);
+
                 entity.Property(e => e.LoginType).HasMaxLength(10);
 
                 entity.Property(e => e.Password).IsRequired();
+
+                entity.Property(e => e.UpdatedOn).HasColumnType("date");
 
                 entity.Property(e => e.UserName)
                     .IsRequired()

@@ -16,12 +16,14 @@ namespace FlightBookService.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IJWTManagerRepository iJWTManager;
+        private readonly IUserRegistration _userRegistration;
 
-        public UsersController(IJWTManagerRepository jWTManager)
+        public UsersController(IJWTManagerRepository jWTManager, IUserRegistration userRegistration)
         {
             iJWTManager = jWTManager;
+            _userRegistration = userRegistration;
         }
-       
+
         [AllowAnonymous]
         [HttpPost]
         [Route("authenticate")]
@@ -33,6 +35,28 @@ namespace FlightBookService.Controllers
                 return Unauthorized();
             }
             return Ok(token);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("register")]
+        public IActionResult UserRegistration(UserRegistDetails userdata)
+        {
+          _userRegistration.RegisterUser(userdata);
+            return Ok();
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("getuserdetails")]
+        public IActionResult GetUserDetails(User user)
+        {
+            if (user!=null)
+            {
+                return Ok(_userRegistration.GetUserDetails(user));
+            }
+            return BadRequest();
+           
         }
     }
 }

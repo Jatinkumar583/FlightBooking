@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 
 namespace FlightBookService.ViewModels
 {
-    public class User
+    public class UserRegistDetails
     {
         public string UserName { get; set; }
+        public string EmailId { get; set; }
         public string Password { get; set; }
+        public string LoginType { get; set; }
     }
 }

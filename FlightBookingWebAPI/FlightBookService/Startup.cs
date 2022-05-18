@@ -72,6 +72,7 @@ namespace FlightBookService
 
 
             services.AddScoped<ITicketBooking, TicketBooking>();
+            services.AddScoped<IUserRegistration, UserRegistration>();
             services.AddConsulConfig(Configuration);
             services.AddDbContext<FlightBookingContext>(options => options.UseSqlServer(Configuration.GetConnectionString("FlightBookDbConnection")));
             services.AddAuthentication(x =>
@@ -127,6 +128,10 @@ namespace FlightBookService
             app.UseConsul(Configuration);
             app.UseSwagger();
             app.UseSwaggerUI();
+            app.UseCors(x => x
+         .AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

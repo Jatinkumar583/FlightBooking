@@ -25,7 +25,7 @@ namespace FlightInventoryService.Services
         public Tokens Authenticate(User users)
         {
             var userList = _flightBookingContext.TblUsers.ToList();
-            if (!userList.Any(x => x.UserName == users.Name && x.Password == users.Password))
+            if (!userList.Any(x => x.EmailId == users.UserName && x.Password == users.Password))
             {
                 return null;
             }
@@ -37,7 +37,7 @@ namespace FlightInventoryService.Services
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name,users.Name)
+                    new Claim(ClaimTypes.Name,users.UserName)
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(10),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)

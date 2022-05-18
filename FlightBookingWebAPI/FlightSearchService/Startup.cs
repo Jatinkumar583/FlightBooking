@@ -96,6 +96,10 @@ namespace FlightSearchService
             app.UseConsul(Configuration);
             app.UseSwagger();
             app.UseSwaggerUI();
+            app.UseCors(x => x
+         .AllowAnyOrigin()
+         .AllowAnyMethod()
+         .AllowAnyHeader());
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

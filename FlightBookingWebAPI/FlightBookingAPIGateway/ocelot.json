@@ -34,6 +34,22 @@
     },
     {
       "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/users/register",
+      "DownstreamScheme": "http",
+      "ServiceName": "flightBookService",
+      "UpstreamPathTemplate": "/api/gatway/users/register",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/users/getuserdetails",
+      "DownstreamScheme": "http",
+      "ServiceName": "flightBookService",
+      "UpstreamPathTemplate": "/api/gatway/users/getuserdetails",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/v1.0/flight/airline/inventory/list",
       "DownstreamScheme": "http",
       "ServiceName": "flightInventoryService",

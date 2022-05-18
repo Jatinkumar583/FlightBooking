@@ -9,6 +9,7 @@ namespace FlightInventoryService.Models
     {
         public int InventoryId { get; set; }
         public int FlightNumber { get; set; }
+        public int? AirlineId { get; set; }
         public string Airline { get; set; }
         public string FromPlace { get; set; }
         public string ToPlace { get; set; }
@@ -21,5 +22,9 @@ namespace FlightInventoryService.Models
         public int? TicketCost { get; set; }
         public int? NumberOfRows { get; set; }
         public string Meal { get; set; }
+        public int? CreatedBy { get; set; }
+        public DateTime? CreatedOn { get; set; }
+        public int? UpdatedBy { get; set; }
+        public DateTime? UpdatedOn { get; set; }
     }
 }
