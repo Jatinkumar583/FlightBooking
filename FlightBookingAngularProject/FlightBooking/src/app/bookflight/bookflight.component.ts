@@ -1,5 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { FlightsearchComponent } from '../flightsearch/flightsearch.component';
 import { AirlineInventory } from '../models/airlinedata';
@@ -22,7 +23,7 @@ export class BookflightComponent implements OnInit {
   bookingDetails: BookingDetails=new BookingDetails();
   userDetails: UserData=new UserData();
 
-  constructor(public filterPanelService: FilterPanelService,
+  constructor(public filterPanelService: FilterPanelService,private _router: Router,
     private _eventService: EventService,private _authService:AuthService,public datepipe: DatePipe) {
     
   }
@@ -64,7 +65,8 @@ export class BookflightComponent implements OnInit {
       position: 'center',  
       icon: 'success',  
       text: 'Booked Flight Successfully!'
-    })  
+    }) 
+    this._router.navigate(['/bookinghistory']);   
   }
   ErrorGet(res:any){
     console.log(res);   

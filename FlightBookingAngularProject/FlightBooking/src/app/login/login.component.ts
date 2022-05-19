@@ -11,20 +11,14 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent {
  // loginUserData: UserData = new UserData();
   loginUserData: LoginUserData = new LoginUserData();
-  constructor(private _auth: AuthService, private _router: Router) { }
-  loginUser() {
+  constructor(private _auth: AuthService, private _router: Router) {   }
 
-    this._auth.loginUser(this.loginUserData).subscribe(res => {      
-      localStorage.setItem('token', res.token)
-      if(localStorage.getItem('usertype')=="admin"){
-        this._router.navigate(['/manageinventory'])
-      }
-      else{
-        this._router.navigate(['/flightsearch'])
-      }      
-    },
-      err => console.log(err));   
-
+  loginUser() {  
+    this.GetLoginUserDetails();
+    this._auth.loginUser(this.loginUserData).subscribe(res=>this.SuccessGet(res),res=> console.log(res));
+      
+    }
+    GetLoginUserDetails(){
       this._auth.loginUserDetails(this.loginUserData).subscribe(res => {      
         localStorage.setItem('usertype', res.loginType);
         localStorage.setItem('userid', res.id);
@@ -33,4 +27,17 @@ export class LoginComponent {
       },
         err => console.log(err)); 
     }  
+
+    SuccessGet(res:any){ 
+   	 localStorage.setItem('token', res.token)  
+     
+		  if(localStorage.getItem('usertype')==='admin'){
+        console.log("hit 1")
+        this._router.navigate(['/manageinventory'])
+      }
+      else if(localStorage.getItem('usertype')==='user'){
+        console.log("hit 2")
+        this._router.navigate(['/flightsearch'])
+      }     
+    }
 }

@@ -1,5 +1,6 @@
   <div class="card">  
     <div class="card-body">
+        <h5 class="new-card-title" >Airline Inventory Details</h5>
         <form class="row g-3 needs-validation" novalidate>
             <div class="col-md-3">
               <label for="validationCustom01" class="form-label" >Airline Name</label>
@@ -46,7 +47,7 @@
                 <label for="validationCustom05" class="form-label">Meal Options</label>
                 <input type="text" class="form-control" id="validationCustom05" name="input11"  [(ngModel)]="airlineInventoryDetails.meal"  required>     
               </div>
-            <div class="col-12">
+            <div class="col-new-md">
                 <button class="btn btn-primary" (click)="UpdateInventory()" *ngIf="isVisibleUpdate" type="submit">Update</button>
               <button class="btn btn-primary" (click)="AddNewInventory()" *ngIf="isVisibleSubmit" type="submit">Submit</button>
             </div>
@@ -56,9 +57,10 @@
 <hr/>
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
     <div class="card">
+        <h5 class="new-card-title" >Existing Inventory</h5>
         <div class="body table-responsive">
             <table class="table table-condensed">
-                <thead>
+                <thead class="thead">
                     <tr>
                         <th>Flight No.</th>
                         <th>Airline</th>

@@ -24,7 +24,7 @@ export class FlightsearchComponent implements OnInit {
   GetScheduleFlights(data: any) {
     this._eventService.GetAirlineList().subscribe(res => this.SearchAirlineList = res, err => (console.log(err),this._router.navigate(['/login'])));
     this.filteredRecord = this.SearchAirlineList.filter(function (item) {
-      return item.fromPlace == data.txtFromPlace && item.toPlace == data.txtToPlace;
+      return item.fromPlace == data.txtFromPlace || item.toPlace == data.txtToPlace || item.startDateTime==data.txtBoardingDate || item.flightNumber==data.txtFlightNumber;
     });
     console.log(this.filteredRecord);
     //this.tblShow = true;

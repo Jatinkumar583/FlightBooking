@@ -34,7 +34,7 @@ export class ManageinventoryComponent implements OnInit {
     this.airlineInventoryDetails.UpdatedBy=Number(localStorage.getItem('userid')!);
     this.airlineInventoryDetails.UpdatedOn= new Date();
     
-    this._eventService.SaveNewInventory(this.airlineInventoryDetails).subscribe(res=>this.SuccessGet(res),res=>this.ErrorGet(res));;
+    this._eventService.SaveNewInventory(this.airlineInventoryDetails).subscribe(res=>this.SuccessGet(res),res=>this.ErrorGet(res));
   }
 
   SuccessGet(res:any){    

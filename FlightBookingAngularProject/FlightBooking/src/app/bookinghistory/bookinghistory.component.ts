@@ -47,6 +47,7 @@ export class BookinghistoryComponent implements OnInit {
       icon: 'success',  
       text: 'Ticket Cancelled Successfully!'
     })  
+    this.ngOnInit();
   }
 
 
