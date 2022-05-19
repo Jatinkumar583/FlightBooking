@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { BookedDetails } from '../models/bookeddetails';
 import { BookedPassengerDetails } from '../models/bookedpassenger';
 import { PassengerDetails } from '../models/passengerdetails';
@@ -34,6 +35,18 @@ export class BookinghistoryComponent implements OnInit {
   ViewTicketDetails(ticketDetails:BookedDetails){
     this.filterPanelService.BookedData = ticketDetails;    
     this._router.navigate(['/ticketdetails']);   
+  }
+
+  CancelTicket(ticketDetails:BookedDetails){
+    this._eventService.CancelBookedTicket(ticketDetails.pnr).subscribe(res => this.SuccessGet(res), err => (console.log(err),this._router.navigate(['/login'])));
+  }
+
+  SuccessGet(res:any){    
+    Swal.fire({  
+      position: 'center',  
+      icon: 'success',  
+      text: 'Ticket Cancelled Successfully!'
+    })  
   }
 
 

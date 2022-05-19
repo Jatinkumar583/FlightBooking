@@ -127,6 +127,17 @@ namespace FlightBookService.Services
                          _flightBookingContext.SaveChanges();
                     }
                     #endregion
+                    #region Update the seat to tblAirlineInventory table
+                    var entity = _flightBookingContext.TblAirlineInventories.FirstOrDefault(item => item.FlightNumber == itemToRemove.FlightNumber);
+                    // Validate entity is not null
+                    if (entity != null)
+                    {
+                        // Make changes on entity
+                        entity.TotalBussClassSeats = entity.TotalBussClassSeats+ itemToRemove.TotalSeat;
+                        // Save changes in database
+                        _flightBookingContext.SaveChanges();
+                    }
+                    #endregion
 
                     transaction.Commit();
                     return 1;

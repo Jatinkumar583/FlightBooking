@@ -42,7 +42,7 @@ namespace FlightInventoryService.Models
 
                 entity.Property(e => e.CreatedOn).HasColumnType("date");
 
-                entity.Property(e => e.EndDateTime).HasColumnType("datetime");
+                entity.Property(e => e.EndDateTime).HasMaxLength(50);
 
                 entity.Property(e => e.FromPlace).HasMaxLength(50);
 
@@ -50,7 +50,7 @@ namespace FlightInventoryService.Models
 
                 entity.Property(e => e.Meal).HasMaxLength(50);
 
-                entity.Property(e => e.StartDateTime).HasColumnType("datetime");
+                entity.Property(e => e.StartDateTime).HasMaxLength(50);
 
                 entity.Property(e => e.ToPlace).HasMaxLength(50);
 

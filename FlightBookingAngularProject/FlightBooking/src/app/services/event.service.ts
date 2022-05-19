@@ -3,6 +3,7 @@ import { UserData } from "../models/UserData";
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from "@angular/core";
 import { BookingDetails } from "../models/bookingdetails";
+import { AirlineInventory } from "../models/airlinedata";
 
 @Injectable()
 export class EventService {
@@ -30,6 +31,16 @@ export class EventService {
         return this.http.get<any>("http://localhost:55167/api/v1.0/flight/booked/passenger/"+bookingId+"");
     }
 
+    CancelBookedTicket(pnr:string){
+        return this.http.delete<any>("http://localhost:55167/api/v1.0/flight/booking/cancel/"+pnr+"");
+    }
 
+    SaveNewInventory(data:AirlineInventory){
+        return this.http.post("http://localhost:64350/api/v1.0/flight/airline/inventory/add", data);
+    }
+
+    UpdateFlightInventory(data:AirlineInventory){
+        return this.http.post("http://localhost:64350/api/v1.0/flight/airline/inventory/update", data);
+    }
 
 }

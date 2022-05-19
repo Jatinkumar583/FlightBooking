@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FlightBookingWebAPI\\Common\\Common.csproj": {}
+    "D:\\CaseStudyContent\\FlightBookingWebAPI\\Common\\Common.csproj": {}
   },
   "projects": {
-    "D:\\FlightBookingWebAPI\\Common\\Common.csproj": {
+    "D:\\CaseStudyContent\\FlightBookingWebAPI\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FlightBookingWebAPI\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\CaseStudyContent\\FlightBookingWebAPI\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\FlightBookingWebAPI\\Common\\Common.csproj",
+        "projectPath": "D:\\CaseStudyContent\\FlightBookingWebAPI\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\FlightBookingWebAPI\\Common\\obj\\",
+        "outputPath": "D:\\CaseStudyContent\\FlightBookingWebAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

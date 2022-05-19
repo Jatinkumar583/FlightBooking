@@ -8,3 +8,13 @@ D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
 D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
 D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.dll
 D:\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.pdb
+D:\CaseStudyContent\FlightBookingWebAPI\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+D:\CaseStudyContent\FlightBookingWebAPI\Common\bin\Debug\netcoreapp3.1\Common.dll
+D:\CaseStudyContent\FlightBookingWebAPI\Common\bin\Debug\netcoreapp3.1\Common.pdb
+D:\CaseStudyContent\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.csproj.AssemblyReference.cache
+D:\CaseStudyContent\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\CaseStudyContent\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+D:\CaseStudyContent\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+D:\CaseStudyContent\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+D:\CaseStudyContent\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.dll
+D:\CaseStudyContent\FlightBookingWebAPI\Common\obj\Debug\netcoreapp3.1\Common.pdb

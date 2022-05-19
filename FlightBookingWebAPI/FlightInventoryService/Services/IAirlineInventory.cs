@@ -11,5 +11,7 @@ namespace FlightInventoryService.Services
         List<TblAirlineInventory> GetAirlineInventoryDetails();
         int RegisterAirline(TblAirlineRegistration tblAirlineDetail);
         int AddAirlineInventory(TblAirlineInventory tblAirlineInventory);
+
+        int UpdateFlightInventory(TblAirlineInventory tblAirlineInventory);
     }
 }

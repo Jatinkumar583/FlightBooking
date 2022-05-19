@@ -47,5 +47,44 @@ namespace FlightInventoryService.Services
             }
             
         }
+
+        public int UpdateFlightInventory(TblAirlineInventory tblAirlineInventory)
+        {
+            try
+            {
+                #region Update tblAirlineInventory table
+                var entity = _flightBookingContext.TblAirlineInventories.FirstOrDefault(item => item.FlightNumber == tblAirlineInventory.FlightNumber);
+                // Validate entity is not null
+                if (entity != null)
+                {
+                    // Make changes on entity
+                    entity.Airline = tblAirlineInventory.Airline;
+                    entity.FromPlace = tblAirlineInventory.FromPlace;
+                    entity.ToPlace = tblAirlineInventory.ToPlace;
+                    entity.StartDateTime = tblAirlineInventory.StartDateTime;
+                    entity.EndDateTime = tblAirlineInventory.EndDateTime;
+                    entity.ScheduledDays = tblAirlineInventory.ScheduledDays;
+                    entity.InstrumentUsed = tblAirlineInventory.InstrumentUsed;
+                    entity.TotalBussClassSeats = tblAirlineInventory.TotalBussClassSeats;
+                    entity.TicketCost = tblAirlineInventory.TicketCost;
+                    entity.NumberOfRows = tblAirlineInventory.NumberOfRows;
+                    entity.Meal = tblAirlineInventory.Meal;
+                    // Save changes in database
+                    _flightBookingContext.SaveChanges();
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+          
+        }
     }
 }

@@ -71,7 +71,33 @@ namespace FlightInventoryService.Controllers
                     var addStatus = _airlineInventory.AddAirlineInventory(inventoryDetails);
                     if (addStatus == 1)
                     {
-                        return Ok("Airline Inventory Details Added Successfully");
+                        return Ok();
+                    }
+                    else
+                    {
+                        return BadRequest();
+                    }
+                }
+                return BadRequest();
+            }
+            catch
+            {
+                return BadRequest();
+            }
+
+        }
+
+        [HttpPost("airline/inventory/update")]
+        public IActionResult UpdateAirlineInventory(TblAirlineInventory inventoryDetails)
+        {
+            try
+            {
+                if (inventoryDetails != null)
+                {
+                    var addStatus = _airlineInventory.UpdateFlightInventory(inventoryDetails);
+                    if (addStatus == 1)
+                    {
+                        return Ok();
                     }
                     else
                     {

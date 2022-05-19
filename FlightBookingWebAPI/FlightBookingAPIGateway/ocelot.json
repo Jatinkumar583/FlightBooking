@@ -82,6 +82,14 @@
     },
     {
       "UseServiceDiscovery": true,
+      "DownstreamPathTemplate": "/api/v1.0/flight/airline/inventory/update",
+      "DownstreamScheme": "http",
+      "ServiceName": "flightInventoryService",
+      "UpstreamPathTemplate": "/api/gatway/flight/airline/inventory/update",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/users/inventory/authenticate",
       "DownstreamScheme": "http",
       "ServiceName": "flightInventoryService",

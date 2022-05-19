@@ -42,7 +42,7 @@
                         <td>{{item.totalSeat}}</td>
                         <td>{{item.createdOn}}</td>  
                         <td><button class="btn btn-primary"  type="submit" (click)="ViewTicketDetails(item)">View Details</button></td>
-                        <td><button class="btn btn-primary" type="submit" >Cancel Ticket</button></td>                      
+                        <td><button class="btn btn-primary" type="submit" (click)="CancelTicket(item)">Cancel Ticket</button></td>                      
                     </tr>
                 </tbody>
             </table>

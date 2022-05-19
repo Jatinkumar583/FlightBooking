@@ -5,7 +5,8 @@ import { UserData } from '../models/UserData';
 import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
  // loginUserData: UserData = new UserData();
@@ -15,7 +16,12 @@ export class LoginComponent {
 
     this._auth.loginUser(this.loginUserData).subscribe(res => {      
       localStorage.setItem('token', res.token)
-      this._router.navigate(['/special'])
+      if(localStorage.getItem('usertype')=="admin"){
+        this._router.navigate(['/manageinventory'])
+      }
+      else{
+        this._router.navigate(['/flightsearch'])
+      }      
     },
       err => console.log(err));   
 

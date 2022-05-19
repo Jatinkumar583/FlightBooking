@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e5F2leg1b1nivmxhfTSO0YNoVhxx4rZXZOXZowYARHqKxie4xkycPfbvL+bt5z+gG0HKRkxDYYGVOYD4nRqmAg==",
+  "dgSpecHash": "mcJ7R747jFJLHsXwIUN/ZoOIqmFOAKKF5XV3JxWnCXpVIQ6lcPmkCT1/DD8dcz7wrEhDP5qrjOPPQ53bJ0HE0Q==",
   "success": true,
-  "projectFilePath": "D:\\FlightBookingWebAPI\\FlightSearchService\\FlightSearchService.csproj",
+  "projectFilePath": "D:\\CaseStudyContent\\FlightBookingWebAPI\\FlightSearchService\\FlightSearchService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automatonymous\\5.0.1\\automatonymous.5.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\confluent.kafka\\1.5.0\\confluent.kafka.1.5.0.nupkg.sha512",
