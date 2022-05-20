@@ -1,5 +1,6 @@
 <div class="card">  
     <div class="card-body">
+      <h5 class="new-card-title" >Booking History</h5>
         <form  #bookedFlight="ngForm"  (ngSubmit)="GetBookedFlightDetails(bookedFlight.value)"class="row g-3 needs-validation" novalidate>
             <div class="col-md-3">
               <label for="validationCustom01" class="form-label" >Search By PNR</label>
@@ -9,7 +10,7 @@
               <label for="validationCustom02" class="form-label" >Search By EmailId</label>
               <input type="text" class="form-control" id="validationCustom02" name="txtUserEmailId" ngModel required>     
             </div>
-            <div class="col-12">
+            <div class="col-new-md">
               <button class="btn btn-primary" type="submit">Search</button>
             </div>
           </form>
@@ -20,7 +21,7 @@
     <div class="card">
         <div class="body table-responsive">
             <table class="table table-condensed">
-                <thead>
+                <thead class="thead">
                     <tr>
                         <th>Flight No.</th>
                         <th>PNR</th>

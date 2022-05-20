@@ -44,6 +44,7 @@ export class ManageinventoryComponent implements OnInit {
       text: 'Record Saved Successfully!'
     })
     this.airlineInventoryDetails=new AirlineInventory();  
+    this.ngOnInit();
   }
   ErrorGet(res:any){
     console.log(res);   
